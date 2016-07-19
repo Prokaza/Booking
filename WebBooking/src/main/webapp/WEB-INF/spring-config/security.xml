@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:context="http://www.springframework.org/schema/context"
+             xmlns:security="http://www.springframework.org/schema/security"
+
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+                    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                    http://www.springframework.org/schema/security
+                    http://www.springframework.org/schema/security/spring-security-3.1.xsd
+                    http://www.springframework.org/schema/context
+                    http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <http pattern="resources/css/**" security="none" />
+    <http pattern="resources/image/**" security="none" />
+
+    <http auto-config="true" use-expressions="true">
+        <access-denied-handler error-page="/403" />
+        <intercept-url pattern="/personal_account/**" access="hasAnyRole('USER','ADMIN','MANAGER')" />
+        <intercept-url pattern="/booking/**" access="hasAnyRole('USER','MANAGER')" />
+        <intercept-url pattern="/rental/**" access="hasRole('MANAGER')" />
+        <intercept-url pattern="/user_base/**" access="hasRole('ADMIN')" />
+
+        <form-login login-page="/login" authentication-failure-url="/login?error=true" default-target-url="/" />
+        <logout logout-success-url="/" />
+        <remember-me key="spitterKey" token-validity-seconds="2419200"/>
+    </http>
+
+    <!--<beans:bean id="userDetailsService" class="sfirat.service.UserDetailsServiceImpl"/>-->
+
+    <!--<beans:bean id="daoAuthenticationProvider"  class="org.springframework.security.authentication.dao.DaoAuthenticationProvider">-->
+        <!--<beans:property name="userDetailsService" ref="userDetailsService"/>-->
+    <!--</beans:bean>-->
+
+    <!--<beans:bean id="authenticationManager" class="org.springframework.security.authentication.ProviderManager">-->
+        <!--<beans:property name="providers">-->
+            <!--<beans:list>-->
+                <!--<beans:ref local="daoAuthenticationProvider" />-->
+            <!--</beans:list>-->
+        <!--</beans:property>-->
+    <!--</beans:bean>-->
+
+    <security:authentication-manager>
+        <security:authentication-provider >
+            <security:password-encoder hash="md5" />
+            <user-service >
+                <user name="sfirate@mail.ru" password="124578" authorities="ADMIN"/>
+                <user name="sfiratik@gmail.com" password="124578" authorities="USER"/>
+                <user name="s9f8i7r6a5t4@mail.ru" password="124578" authorities="MANAGER"/>
+                <user name="anonym@mail.ru" password="124578" disabled="true" authorities="USER"/>
+            </user-service>
+        </security:authentication-provider>
+    </security:authentication-manager>
+</beans:beans>

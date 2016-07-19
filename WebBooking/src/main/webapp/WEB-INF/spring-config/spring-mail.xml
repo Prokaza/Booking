@@ -1,0 +1,38 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+
+       <bean id="javaMailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+              <property name="host" value="smtp.gmail.com" />
+              <property name="port" value="587" />
+              <property name="username" value="booking.bicycle@gmail.com" />
+              <property name="password" value="124578Booking" />
+              <property name="javaMailProperties">
+                     <props>
+                            <prop key="mail.smtp.ssl.trust">smtp.gmail.com</prop>
+                            <prop key="mail.smtp.starttls.enable">true</prop>
+                            <prop key="mail.smtp.auth">true</prop>
+                     </props>
+              </property>
+       </bean>
+
+       <bean id="emailTemplate" class="org.springframework.mail.SimpleMailMessage">
+              <property name="from" value="booking.bicycle@gmail.com" />
+              <property name="subject" value="Регистрация на сайте BOOKING AND RENTAL BICYCLE" />
+              <property name="text">
+                     <value>
+                            <![CDATA[Доброго дня, %s!
+
+                            Вітаємо Вас з реєстрацією на нашому сайті!
+                            Ваш логин: %s
+                            Ваш пароль: %s
+
+                            Це повідомлення автоматичне. Відповідати на нього не потрібно!
+
+                            З повагою, %s.]]>
+                     </value>
+              </property>
+       </bean>
+
+</beans>

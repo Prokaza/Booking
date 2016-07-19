@@ -1,0 +1,799 @@
+﻿body {
+	background: #151424 url('/resources/image/bg000.jpg') fixed;
+	background-size: cover;
+	color: #000000;
+	font-family: Tahoma, serif;
+	font-size: 16px;
+	margin: 0;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+#container {
+	position: relative;
+	min-height: 100%;
+	margin: 0 auto;
+	padding: 0;
+	width: 1100px;
+}
+
+#header {
+	position: relative;
+	display: inline-block;
+	width: 1100px;
+	height: 75px;
+	border: 2px solid #000;
+	border-radius: 10px;
+	background: rgba(135, 135, 135, 0.6);
+}
+
+#title{
+	width: 900px;
+	padding-top: 10px;
+	text-align: center;
+	font-style: normal;
+	font-size: 28pt;
+	font-weight: bolder;
+	color: #000;
+}
+
+#local {
+	height: 35px;
+	position: relative;
+	/*padding-top: 30px;*/
+	/*top: 45px;*/
+	/*padding-right: 15px;*/
+	float: right;
+	margin-right: 10px;
+	bottom: 15px;
+}
+
+#local a{
+	display: inline-block;
+	line-height: 20px;
+	width: 40px;
+	height: 35px;
+	padding-right: 2px;
+	padding-left: 2px;
+}
+
+
+.log_in{
+	position: absolute;
+	right: 10px;
+	top: 5px;
+	height: 25px;
+}
+
+#main_menu {
+	position: relative;
+	width: 200px;
+	line-height: 35px;
+	font-size: 0;
+	float: left;
+	padding-top: 5px;
+	padding-bottom: 5px;
+ }
+
+#main_menu div{
+	display: block;
+	background: rgba(135, 135, 135, 0.6);
+	font-size: 18px;
+	vertical-align: middle;
+	width: 100%;
+	margin: 5px 0 5px 0;
+	text-align: center;
+	font-weight: bold;
+	border: 3px solid  #000 ;
+	border-radius: 10px;
+}
+
+#main_menu div:hover  {
+	background-color: rgba(192, 192, 192, 0.8);
+	color: rgba(255, 255, 255, 1);
+	border: 3px solid #66afe9;
+}
+
+a{
+	display: block;
+	min-height: 35px;
+	text-decoration: none;
+	color: black;
+	transition: 0.2s linear;
+}
+a:visited{
+	text-decoration: none;
+	color: black;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 20px;
+}
+
+.menu_booking {
+	height: 260px;
+	margin: 10px auto;
+	width: 350px;
+	background: radial-gradient(#b3b3b3, dimgray);
+	border: solid 3px #151424;
+	border-radius: 10px;
+}
+
+.menu_bicycle {
+	line-height: 75px;
+	vertical-align: middle;
+	margin: 10px;
+	background: radial-gradient(#b3b3b3, dimgray);
+	border: solid 2px #151424;
+	border-radius: 10px;
+}
+.menu_bicycle p{
+	position: relative;
+	width: 325px;
+	float: left;
+	height: 20px;
+	text-align: center;
+	font-size: 25px;
+	font-weight: bolder;
+	bottom: 25px;
+}
+
+.menu_bicycle_select{
+	padding: 5px;
+	position: relative;
+	display: inline-block;
+	margin-right: 5px;
+	vertical-align: middle;
+}
+
+.menu_bicycle_select select{
+	height: 35px;
+	width: 175px;
+	font-family: cursive;
+	font-size: 18px;
+	color: black;
+	background-color: rgba(255, 255, 255, 0.8);
+	border: 3px solid #cccccc;
+	border-radius: 10px;
+	box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.menu_bicycle_select select:hover{
+	border: 3px solid rgba(3, 0, 255, 1);
+}
+
+.menu_bicycle_select select option{
+	background-color: rgba(105, 105, 105, 0.8);
+}
+
+.button_admins{
+	background: rgba(135, 135, 135, 0.6);
+	line-height: 30px;
+	width: 100px;
+	float: right;
+	margin: 20px 15px 5px 5px;
+	text-align: center;
+	color: black;
+	font-size: 15px;
+	font-weight: bold;
+	font-family: cursive;
+	border: 3px solid  #000 ;
+	border-radius: 10px;
+}
+.button_admins:hover  {
+	background-color: rgba(192, 192, 192, 0.8);
+	color: rgba(255, 255, 255, 1);
+	border: 3px solid #66afe9;
+}
+
+.button_user{
+	background: rgba(135, 135, 135, 0.6);
+	line-height: 30px;
+	width: 150px;
+	float: right;
+	margin: 0px 5px 5px 0px;
+	text-align: center;
+	color: black;
+	font-size: 18px;
+	font-weight: bold;
+	font-family: cursive;
+	border: 3px solid  #000 ;
+	border-radius: 10px;
+}
+.button_user:hover  {
+	background-color: rgba(192, 192, 192, 0.8);
+	color: rgba(255, 255, 255, 1);
+	border: 3px solid #66afe9;
+}
+
+.button_manager{
+	background: rgba(135, 135, 135, 0.6);
+	line-height: 30px;
+	width: 150px;
+	margin: 5px 10px 10px 0px;
+	text-align: center;
+	color: black;
+	font-size: 22px;
+	font-weight: bold;
+	font-family: cursive;
+	border: 3px solid  #000 ;
+	border-radius: 10px;
+}
+.button_manager:hover  {
+	background-color: rgba(192, 192, 192, 0.8);
+	color: rgba(255, 255, 255, 1);
+	border: 3px solid #66afe9;
+	font-size: 22px;
+
+}
+.menu_bicycle_a{
+	background: rgba(135, 135, 135, 0.6);
+	line-height: 30px;
+	width: 125px;
+	margin: 5px 5px 5px 0px;
+	float: right;
+	text-align: center;
+	color: black;
+	font-size: 16px;
+	font-weight: bold;
+	font-family: cursive;
+	border: 3px solid  #000 ;
+	border-radius: 10px;
+}
+
+.menu_bicycle_a:hover  {
+	background-color: rgba(192, 192, 192, 0.8);
+	color: rgba(255, 255, 255, 1);
+	border: 3px solid #66afe9;
+}
+
+
+.list_bicycle{
+	position: relative;
+	font-size: 18px;
+	font-weight: bolder;
+}
+.list_bicycle_block {
+	background: dimgray;
+	margin: 10px;
+	border: solid 3px #151424;
+	border-radius: 10px;
+}
+.list_bicycle_name{
+	background: radial-gradient(dimgray, #d3d3d3);
+	text-align: center;
+	padding: 10px 0px 10px 0px;
+	line-height: 35px;
+	margin: 10px;
+	/*display: block;*/
+	border: solid 3px #151424;
+	border-radius: 10px;
+}
+.list_bicycle_info{
+	background: radial-gradient(#b3b3b3, dimgray);
+	position: relative;
+	padding: 0px 10px 0px 10px;
+	margin: 10px;
+	border: solid 3px #151424;
+	border-radius: 10px;
+}
+.list_bicycle_type{
+	padding: 5px;
+	margin-top: 5px;
+	text-align: center;
+}
+.list_bicycle_span{
+	background: radial-gradient(rgba(3, 0, 255, 0.21), rgba(155, 155, 155, 0.34));
+	padding: 5px 35px 5px 35px;
+	margin-top: 5px;
+	text-align: center;
+	border: 2px solid black;
+	border-radius: 10px;
+}
+
+.list_bicycle_text {
+	padding: 10px;
+	position: relative;
+	text-align: justify;
+	width: 425px;
+	float: right;
+}
+.list_bicycle_price_day{
+	float: right;
+	height: auto;
+	width: 45%;
+	position: relative;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	padding: 5px;
+	background: rgba(155, 0, 0, 0.4);
+	font-family: cursive;
+	text-align: center;
+	border: solid 3px #151424;
+	border-radius: 10px;
+}
+.list_bicycle_price_hour{
+	height: auto;
+	width: 45%;
+	position: relative;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	padding: 5px;
+	background: rgba(0, 155, 3, 0.4);
+	font-family: cursive;
+	text-align: center;
+	border: solid 3px #151424;
+	border-radius: 10px;
+}
+.image_bike{
+	margin:10px auto;
+	border: 2px solid #000;
+	border-radius: 10px;
+	width: 350px;
+}
+
+#content {
+	background: rgba(135, 135, 135, 0.6);
+	border: 2px solid #000000;
+	border-radius: 15px;
+	margin-bottom:10px;
+	margin-top: 10px;
+	position: relative;
+	float: right;
+	padding-bottom: 25px;
+	width: 875px;
+}
+
+#footer {
+	bottom: 0;
+	float: right;
+	width: 100%;
+	height: 35px;
+	background: rgba(135, 135, 135, 0.6);
+	padding-top: 5px;
+	border: 2px solid #000;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+#table_bike{
+	border: 2px solid #000000;
+	border-spacing: 0;
+	border-collapse: collapse;
+	/*border-collapse: collapse !important;*/
+}
+
+.table_bike td,
+.table_bike th {
+	font-weight: bolder;
+	background-color: #c1c1c1 !important;
+}
+
+#image_main {
+	display:block;
+	margin:10px auto;
+	border: 1px solid #000;
+	border-radius: 10px;
+	width: 850px;
+}
+
+#content h3{
+	text-align: justify;
+}
+
+.button_float_left{
+	float: left;
+}
+.button_float_right{
+	float: right;
+}
+
+.button_login {
+	display: block;
+	background: rgba(135, 135, 135, 0.6);
+	width: 100%;
+	height: 30px;
+	margin-top: 10px;
+	font-size: 16px;
+	font-weight: bolder;
+	font-family: cursive;
+	text-align: center;
+	border: 3px solid black;
+	border-radius: 5px;
+}
+.button_login:hover {
+	background-color: rgba(192, 192, 192, 0.8);
+	color: rgba(255, 255, 255, 1);
+	border: 3px solid #66afe9;
+	font-size: 18px;
+	transition: 0.1s linear;
+}
+
+.button_reg {
+	display: block;
+	background: rgba(135, 135, 135, 0.6);
+	width: 210px;
+	height: 40px;
+	margin: auto;
+	font-size: 14px;
+	font-weight: bolder;
+	text-align: center;
+	border: 3px solid black;
+	border-radius: 5px;
+}
+.button_reg:hover {
+	 background-color: rgba(192, 192, 192, 0.8);
+	 border: 3px solid #5c5c5c;
+	 font-size: 16px;
+	 transition: 0.1s linear;
+ }
+
+.form{
+	margin:  auto;
+	width: 650px;
+	font-weight: bolder;
+	font-family: TimesNewRoman Serif;
+}
+.other_form {
+	/*position: relative;*/
+	margin: 0 auto;
+	width: 300px;
+	font-weight: bolder;
+}
+
+.login {
+	/*position: relative;*/
+	margin: 0 auto;
+	width: 250px;
+	font-weight: bolder;
+}
+.login input{
+	margin: 10px auto;
+	font-weight: bolder;
+	font-family: TimesNewRoman serif;
+}
+
+.fieldset {
+	border: 3px solid black;
+	border-radius: 10px;
+	font-weight: bolder;
+	margin: 25px auto;
+}
+.fieldset:hover {
+	background-color: rgba(192, 192, 192, 0.44);
+	color: #000000;
+	border: 3px solid #66afe9;
+	/*font-size: 18px;*/
+}
+
+.fieldset_info {
+	position: relative;
+	border: 3px solid black;
+	border-radius: 10px;
+	float: left;
+}
+.fieldset_info:hover {
+	background-color: rgba(192, 192, 192, 0.44);
+	color: #000000;
+	border: 3px solid #66afe9;
+	/*font-size: 18px;*/
+}
+.fieldset_info input{
+	margin: 5px 0px 5px;
+}
+
+.fieldset_address {
+	position: relative;
+	margin: 5px;
+	border: 3px solid black;
+	border-radius: 10px;
+	float: right;
+}
+.fieldset_address:hover {
+	background-color: rgba(192, 192, 192, 0.44);
+	color: #000000;
+	border: 3px solid #66afe9;
+	/*font-size: 18px;*/
+}
+.fieldset_address input{
+	margin: 5px 0px 5px;
+}
+.input_text{
+	display: block;
+	width: 350px;
+	height: 25px;
+	padding: 2px 10px;
+	font-size: 16px;
+	line-height: 1;
+	color: #555555;
+	background-color: rgba(255, 255, 255, 0.8);
+	border: 3px solid #cccccc;
+	border-radius: 5px;
+	box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+.input_text_area{
+	display: block;
+	width: 350px;
+	height: 150px;
+	padding: 2px 10px;
+	font-size: 16px;
+	line-height: 1;
+	color: #555555;
+	background-color: rgba(255, 255, 255, 0.8);
+	border: 3px solid #cccccc;
+	border-radius: 5px;
+	box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+.input {
+	display: block;
+	width: 240px;
+	height: 25px;
+	padding: 2px 10px;
+	font-size: 16px;
+	line-height: 1;
+	color: #555555;
+	background-color: rgba(255, 255, 255, 0.8);
+	border: 3px solid #cccccc;
+	border-radius: 5px;
+	box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+.input:hover {
+	background-color: rgba(255, 255, 255, 0.6);
+	outline: 5px;
+	border-color: #66afe9;
+	font-weight: bold;
+}
+.input:focus {
+	border-color: #2fe98e;
+	background-color: rgba(255, 255, 255, 0.6);
+	outline: 5px;
+	font-weight: bold;
+}
+.pers_acc_select{
+	position: relative;
+	right: 85px;
+	float: right;
+}
+
+.select {
+	width: auto;
+	font-size: 14px;
+	line-height: 1;
+	height: 30px;
+	width: 175px;
+	color: #555555;
+	background-color: rgba(255, 255, 255, 0.8);
+	border: 3px solid #cccccc;
+	border-radius: 5px;
+	box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.select:hover {
+	background-color: rgba(255, 255, 255, 0.6);
+	outline: 5px;
+	font-weight: bold;
+}
+
+.select:focus {
+	border-color: #66afe9;
+	background-color: rgba(255, 255, 255, 0.6);
+	outline: 5px;
+	font-weight: bold;
+}
+
+.error {
+	display: block;
+	width: 225px;
+	text-align: justify;
+	font-size: 14px;
+	color: #c50000;
+}
+
+.error_login{
+	display: block;
+	margin:auto;
+	width: auto;
+	/*background: #585653;*/
+	height: 45px;
+	text-align: center;
+	font-size: 28px;
+	color: #c50000;
+}
+
+#main_text {
+	text-align: justify;
+	font-size: 18px;
+	font-weight: bold;
+	color: black;
+	padding-right: 15px;
+	text-indent: 50px;
+}
+
+#center_text {
+	text-align: center;
+	font-size: 16px;
+	color: black;
+	font-weight: bolder;
+}
+
+#ico {
+	width: 75px;
+}
+
+#font_green {
+	color: #00BF2A;
+}
+
+#font_orange {
+	color: orange;
+}
+
+#font_blue {
+	color: dodgerblue;
+}
+
+#font_black {
+	color: black;
+	text-align: center;
+}
+
+#error_403 {
+	background-image: url('/resources/image/error_403.jpg') ;
+}
+#error_403 div{
+	display: block;
+	margin: 0 auto;
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+	color: red;
+}
+
+#error_403 div a{
+	color: blue;
+	font-family: TimesNewRoman, serif;
+	font-size: 20px;
+}
+
+#error_403 div a:hover{
+	color: blue;
+	font-family: TimesNewRoman, serif;
+	font-size: 35px;
+	transition: 0.1s linear;
+}
+
+.booking_list {
+	border: 3px solid black;
+	border-radius: 10px;
+	font-weight: bolder;
+	margin: 10px 10px auto;
+	padding: 10px;
+}
+.booking_list_name {
+	background-color: rgba(192, 192, 192, 0.44);
+	border: 3px solid black;
+	border-radius: 10px;
+	font-size: 25px;
+	font-weight: bolder;
+	text-align: center;
+	margin: 10px 10px auto;
+	padding: 10px;
+}
+.booking_list_point{
+	display: inline-block;
+	width: 75%;
+	margin: 5px ;
+	padding: 5px;
+	font-size: 18px;
+	border: 3px solid black;
+	border-radius: 10px;
+	font-weight: bolder;
+}
+.booking_list:hover {
+	background-color: rgba(192, 192, 192, 0.44);
+	color: #000000;
+	border: 3px solid #66afe9;
+}
+
+.messageAlert {
+	color: red;
+	font-family: cursive;
+	font-size: 25px;
+	font-weight: bolder;
+	text-align: center;
+}
+
+.table_users {
+	border: 3px solid black;
+	border-radius: 10px;
+	font-weight: bolder;
+	margin: 5px;
+}
+
+.table_users_one {
+	background-color: rgba(192, 192, 192, 0.44);
+	border: 3px solid black;
+	border-radius: 10px;
+	font-size: 18px;
+	font-weight: bolder;
+	text-align: center;
+	margin: 10px 10px 10px 10px;
+	padding: 10px;
+}
+
+.button_user_base{
+	background: rgba(135, 135, 135, 0.6);
+	line-height: 30px;
+	width: 135px;
+	margin: 0px 5px 5px 0px;
+	text-align: center;
+	color: black;
+	font-size: 18px;
+	font-weight: bold;
+	font-family: cursive;
+	border: 3px solid  #000 ;
+	border-radius: 10px;
+}
+.button_user_base:hover  {
+	background-color: rgba(192, 192, 192, 0.8);
+	color: rgba(255, 255, 255, 1);
+	border: 3px solid #66afe9;
+	font-size: 18px;
+}
+
+.menu_user_base{
+	background: rgba(135, 135, 135, 0.6);
+	text-align: center;
+	font-size: 25px;
+	line-height: 75px;
+	font-weight: bolder;
+	border: 3px solid  #000 ;
+	border-radius: 10px;
+}
+
+.user_info_one{
+	width: 650px;
+	height: 75px;
+	margin-bottom: 15px;
+}
+
+.user_info_two{
+	width: 100%;
+	margin-bottom: 15px;
+}
+.text_right{
+	text-align: right;
+}
+.list_li{
+	display: block;
+}
+.list_padding{
+	padding-bottom: 5px;
+}
+.text_left{
+	text-align: left;
+}
+
+.button_base{
+	background: rgba(135, 135, 135, 0.6);
+	line-height: 30px;
+	width: 150px;
+	float: right;
+	margin: 5px 5px 5px 5px;
+	text-align: center;
+	color: black;
+	font-size: 18px;
+	font-weight: bold;
+	font-family: cursive;
+	border: 3px solid  #000 ;
+	border-radius: 10px;
+}
+.button_base:hover  {
+	background-color: rgba(192, 192, 192, 0.8);
+	color: rgba(255, 255, 255, 1);
+	border: 3px solid #66afe9;
+}
